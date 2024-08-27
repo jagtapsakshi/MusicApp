@@ -1,36 +1,37 @@
-.Track{
+.Track {
     display: flex;
     align-items: center;
-    border-bottom: 1px, solid rgba(256,256,256,0.8);
-
+    border-bottom: 1px solid rgba(256, 256, 256, 0.8); /* Fixed syntax */
 }
 
-.Track-action{
+.Track-action {
     cursor: pointer;
     padding: 0.5rem;
     font-size: 1.05rem;
-    transition: color 0.25;
-    border: 0px;
-    background-color: rgba(0,0,0,0);
+    transition: color 0.25s; /* Added 's' for seconds */
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
     color: #fff;
 }
 
-.Track-action:hover{
-    color:(256,256,256,0.5);
-
+.Track-action:hover {
+    color: rgba(256, 256, 256, 0.5); /* Fixed color syntax */
 }
-.Track-information{
-    float: grow 1;
+
+.Track-information {
+    flex: 1; /* Corrected float to flex */
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     justify-content: center;
     height: 180px;
 }
-.Track-information h3{
+
+.Track-information h3 {
     margin-bottom: 0.22rem;
 }
-.Track-information p{
+
+.Track-information p {
     font-size: 0.83rem;
     font-weight: 300;
-    columns: (256,256,256,0.8);
+    color: rgba(256, 256, 256, 0.8); /* Changed from columns to color */
 }

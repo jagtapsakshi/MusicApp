@@ -1,29 +1,29 @@
 import React, { Component } from 'react';
-import "./SearchBar.css"
+import "./SearchBar.css";
 
 class SearchBar extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
 
-        this.state={
-            term:""
+        this.state = {
+            term: ""
         };
         
-        this.handleTermChange= this.handleTermChange.bind(this);
-        this.search= this.search.bind(this);
-        this.handleEnter= this.handleEnter.bind(this);
+        this.handleTermChange = this.handleTermChange.bind(this);
+        this.search = this.search.bind(this);
+        this.handleEnter = this.handleEnter.bind(this);
     }
 
-    handleTermChange(event){
-        this.setState({term: PerformanceEventTiming.target.value});
+    handleTermChange(event) {
+        this.setState({ term: event.target.value }); // Corrected to event.target.value
     }
 
-    search(){
+    search() {
         this.props.onSearch(this.state.term);
     }
 
-    handleEnter(event){
-        if(event.keycode === 13 ){
+    handleEnter(event) {
+        if (event.keyCode === 13) { // Corrected to event.keyCode
             this.search();
         }
     }
@@ -31,10 +31,14 @@ class SearchBar extends Component {
     render() {
         return (
             <div className='SearchBar'>
-                <input palceholder = "Enter song, album or artist" onChange={this.handleTermChange} onKeyUp={this.handleEnter} />
-                <button className='SearchButton' onClick={this.search}>SEARCH
+                <input
+                    placeholder="Enter song, album or artist" // Corrected typo in placeholder
+                    onChange={this.handleTermChange}
+                    onKeyUp={this.handleEnter}
+                />
+                <button className='SearchButton' onClick={this.search}>
+                    SEARCH
                 </button>
-                
             </div>
         );
     }

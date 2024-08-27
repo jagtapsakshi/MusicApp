@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./SearchResults.css";
-import Tracklist from '../TrackList/Tracklist';
+import Tracklist from '../TrackList/Tracklist'; // Ensure the path is correct
 
 class SearchResults extends Component {
     render() {

@@ -1,56 +1,66 @@
+/* Ensure body, html, and #root cover full viewport height */
 body, 
 html,
-#root{
+#root {
   height: 100%;
+  margin: 0; /* Remove default margin for better layout control */
 }
 
-html{
-  font-size: 10px;
+/* Base font size for scaling */
+html {
+  font-size: 10px; /* Adjust as needed for your design */
 }
-h1{
-  padding: -.77rem, 0;
+
+/* Styles for h1 */
+h1 {
+  padding: 0.77rem 0; /* Use positive values for padding */
   background-color: navy;
   text-align: center;
-  font-family: "Montserrat, sans-serif";
+  font-family: "Montserrat", sans-serif; /* Corrected font-family syntax */
   font-size: 1.8rem;
   color: white;
 }
 
-h1.highlight{
-  color: rgb(46,113,238);
+/* Highlighted h1 style */
+h1.highlight {
+  color: rgb(46, 113, 238);
 }
 
-a{
+/* Styles for anchor tags */
+a {
   text-decoration: none;
   color: white;
 }
 
-h2{
-  font-family: "Montserrat, sans-serif";
+/* Styles for h2 */
+h2 {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.55rem;
 }
 
+/* Styles for .App container */
 .App {
   height: 100%;
-  padding: 0% 17% 10% 17%;
-  background-image: url(./imgC.jpeg);
+  padding: 0 17% 10% 17%; /* Adjust padding to suit layout */
+  background-image: url('./Bg.jpg'); /* Ensure this path is correct relative to your CSS file */
   background-position: center;
   background-repeat: no-repeat;
-  font-family: "Montserrat, sans-serif";
+  background-size: cover; /* Ensure the image covers the element */
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: wheat;
 }
 
-.App-playlist{
+/* Flexbox layout for .App-playlist */
+.App-playlist {
   display: flex;
   justify-content: space-between;
 }
 
+/* Responsive adjustments for .App-playlist */
 @media only screen and (max-width: 1020px) {
-  .App-playlist{
+  .App-playlist {
     align-items: center;
     flex-direction: column;
   }
 }
-
-

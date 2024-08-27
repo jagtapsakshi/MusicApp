@@ -1,53 +1,84 @@
-.Playlist{
+.Playlist {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
-    width: 37%;
-    max-height: 959px;
-    padding: 2.27rem 1.16rem;
-    background-color: rgba(95, 23, 23, 0.7);
-    box-shadow: 0 4px 2px 2px #000000;
+    overflow-y: auto; /* Auto scrolling behavior */
+    width: 40%; /* Standard width */
+    max-height: 80vh; /* Use viewport height for responsiveness */
+    padding: 1.5rem; /* Padding for spacing */
+    background-color: rgba(95, 23, 23, 0.7); /* Semi-transparent background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly reduced box shadow */
+    border-radius: 8px; /* Rounded corners */
+    margin: 1rem; /* Margin for spacing */
+    position: relative; /* For positioning the title */
 }
 
+/* Title styling */
+.Playlist h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem; /* Adjusted font size to match .SearchResults */
+    color: #fff; /* White color for contrast */
+    text-align: center; /* Centered text alignment */
+    margin: 0; /* No margin to keep it close to the top */
+    padding: 0.5rem 1rem; /* Padding for balanced look */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for the title */
+    border-radius: 5px; /* Rounded corners for the title background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Styles for input elements inside .Playlist */
 .Playlist input {
     width: 100%;
     border: 0;
-    outline: 0;
+    outline: none; /* No outline for better consistency */
     background: transparent;
     border-bottom: 1px solid #f6f6f6;
     font-family: "Montserrat", sans-serif;
-    font-size: 1.55rem;
+    font-size: 1.4rem; /* Adjusted font size for readability */
     color: #fff;
+    padding: 0.5rem 0; /* Padding for spacing */
 }
 
+/* Styles for save button */
 .Playlist-save {
     cursor: pointer;
-    width: 10rem;
-    padding: 0.77rem 0;
-    border-radius: 54px;
-    border-width: 0px;
-    margin-top: 1.27rem;
-    background-color: #1db954;
+    width: 12rem; /* Standard button width */
+    padding: 0.8rem 0;
+    border-radius: 25px; /* Rounded corners */
+    border: none; /* No border */
+    margin-top: 1.5rem; /* Margin for spacing */
+    background-color: #1db954; /* Green background */
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 0.83rem;
-    transition: background-color 0.25s;
-    color: #fff;
+    font-size: 1rem; /* Font size for readability */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    color: #fff; /* White text color */
     font-weight: 500;
 }
 
+/* Styles for save button hover effect */
 .Playlist-save:hover {
-    background-color: rgba(65, 233, 129, 0.7);
+    background-color: rgba(65, 233, 129, 0.8); /* Slightly adjusted hover color */
 }
 
+/* Webkit scrollbar styles */
 ::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
+    width: 8px; /* Width for visibility */
 }
 
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Darker thumb for visibility */
+    border-radius: 4px; /* Rounded corners for scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track background */
+}
+
+/* Responsive styles for smaller screens */
 @media only screen and (max-width: 1020px) {
     .Playlist {
-        width: 90%;
+        width: 90%; /* Full width on smaller screens */
+        max-height: 70vh; /* Adjusted height for responsiveness */
     }
 }

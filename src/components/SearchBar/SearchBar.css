@@ -1,43 +1,51 @@
-.SearchBar{
+.SearchBar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 6.94rem;
-    margin-bottom: 6.33rem;
+    padding-top: 6rem; /* Increased padding for a more spacious look */
+    margin-bottom: 5rem; /* Increased margin for better spacing */
 }
 
-.SearchBar input{
-    width: 287px;
-    padding: 0.88rem, 0;
-    border: 1px solid white;
-    border-radius: 3px;
-    margin-bottom:2.2rem;
-    color: black;
+.SearchBar input {
+    width: 400px; /* Increased width for a more prominent input field */
+    padding: 1.2rem; /* Added padding for a more comfortable user experience */
+    border: 1px solid #ccc; /* Changed to a lighter border color for a softer look */
+    border-radius: 8px; /* More rounded corners for a modern appearance */
+    margin-bottom: 2.5rem; /* Increased margin for better spacing */
+    color: #333; /* Darker text color for better readability */
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Larger font size for improved readability */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow for a raised effect */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transitions for interactions */
 }
 
-.SearchBar input:focus{
+.SearchBar input:focus {
     outline: none;
+    border-color: #007bff; /* Changed border color on focus for better visual feedback */
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2); /* Enhanced shadow on focus */
 }
 
-.SearchButton{
+.SearchButton {
     cursor: pointer;
-    width: 8.11rem;
-    padding: 0.77rem, 0;
-    border-radius: 54px;
-    background-color: teal;
+    width: 14rem; /* Increased width for a more prominent button */
+    padding: 1rem 2rem; /* Adjusted padding for a balanced touch area */
+    border-radius: 25px; /* Rounded corners for a modern look */
+    background-color: #007bff; /* Changed to a vibrant blue color */
     text-align: center;
     font-family: "Montserrat", sans-serif;
-    font-size: 0.833rem;
-    transition: background-color 0.25s ;
-    border: 0px;
+    font-size: 1.2rem; /* Larger font size for better readability */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effect */
+    border: none; /* Standardized border style */
     color: white;
-    font-weight: 500;
-
+    font-weight: 600; /* Slightly bolder text */
 }
 
-.SearchButton:hover{
-    background-color: rgb(65, 233,129,0.7);
+.SearchButton:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
 
+.SearchButton:active {
+    background-color: #004494; /* Even darker color when button is pressed */
+    transform: translateY(1px); /* Slight press effect */
 }

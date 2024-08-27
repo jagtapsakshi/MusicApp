@@ -1,3 +1,5 @@
-.Tracklist{
+.Tracklist {
     width: 100%;
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    padding: 1rem; /* Example padding, adjust as needed */
 }

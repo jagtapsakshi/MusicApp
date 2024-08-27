@@ -1,21 +1,46 @@
-.SearchResults{
-    width: 50%;
-    height: 950px;
-    overflow-y:scroll ;
-    padding: 0.88rem;
-    background-color: rgba(95,23,23,0.7);
-    box-shadow: 0 4px 2px 2px #00000000;
+.SearchResults {
+    width: 60%; /* Increased width for better visibility */
+    max-height: 80vh; /* Use viewport height for responsiveness */
+    overflow-y: auto; /* Changed to auto for better scrolling behavior */
+    padding: 1.5rem; /* Added padding for better spacing */
+    background-color: rgba(95, 23, 23, 0.8); /* Darkened background color for better contrast */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for a more prominent effect */
+    border-radius: 8px; /* Added border radius for rounded corners */
+    margin: 2rem auto; /* Centered with margin for spacing */
+    position: relative; /* Added positioning for title */
+}
 
-    ::-webkit-scrollbar{
-        width: 0px;
-        background: transparent;
+/* Title styling */
+.SearchResults h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem; /* Larger font size for prominence */
+    color: #fff; /* White color for better contrast */
+    text-align: center; /* Centered text alignment */
+    margin: 0 0 1.5rem 0; /* Margin for spacing below the title */
+    padding: 0.5rem 0; /* Padding for a more balanced look */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for emphasis */
+    border-radius: 8px; /* Rounded corners for the background */
+}
+
+/* Webkit scrollbar styling */
+.SearchResults::-webkit-scrollbar {
+    width: 8px; /* Added width for visibility */
+}
+
+.SearchResults::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Added thumb styling */
+    border-radius: 4px; /* Rounded corners for scrollbar thumb */
+}
+
+.SearchResults::-webkit-scrollbar-track {
+    background: transparent; /* Track background */
+}
+
+/* Responsive styling for smaller screens */
+@media only screen and (max-width: 1020px) {
+    .SearchResults {
+        width: 90%; /* Adjusted width for smaller screens */
+        max-height: 70vh; /* Adjusted max-height for better responsiveness */
+        margin-bottom: 1.5rem; /* Adjusted margin for smaller screens */
     }
-
-    @media only screen and (max-width: 1020px){
-        .SearchResults{
-            width: 90%;
-            margin-bottom: 2rem;
-        }
-    }
-
 }
