@@ -7,8 +7,11 @@ This Music App is built using React and integrates with the Spotify API to searc
 ## Features
 
 1.Search Functionality: Search for tracks, albums, and artists using Spotify's API.
+
 2.Create Playlists: Create and manage playlists directly within the app.
+
 3.Add/Remove Tracks: Easily add or remove tracks from your playlists.
+
 4.Interactive UI: A user-friendly interface that enhances the music browsing experience.
 
 
@@ -45,9 +48,13 @@ musicapp/
 ## Technology Used
 
 1.React: A JavaScript library for building user interfaces.
+
 2.Spotify API: Used for fetching music data and managing user playlists.
+
 3.HTML/CSS: For structuring and styling the app.
+
 4.JavaScript (ES6+): Core logic implementation.
+
 5.Node.js & NPM: For package management and dependencies.
 
 ## Installation
@@ -101,8 +108,11 @@ For detailed API documentation, refer to Spotify API Documentation. This documen
 Contributions are welcome! Please follow these steps:
 
 1.Fork the repository.
+
 2.Create a new branch (git checkout -b feature/your-feature).
+
 3.Commit your changes (git commit -am 'Add some feature').
+
 4.Push to the branch (git push origin feature/your-feature).
 5.Create a new Pull Request.
 
