@@ -11,6 +11,7 @@ This Music App is built using React and integrates with the Spotify API to searc
 3.Add/Remove Tracks: Easily add or remove tracks from your playlists.
 4.Interactive UI: A user-friendly interface that enhances the music browsing experience.
 
+
 ## Project Structure
 
 ```plaintext
