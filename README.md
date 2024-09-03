@@ -13,6 +13,7 @@ This Music App is built using React and integrates with the Spotify API to searc
 
 ## Project Structure
 
+```plaintext
 musicapp/
 ├── node_modules/
 ├── public/
@@ -38,6 +39,7 @@ musicapp/
 ├── package.json
 ├── package-lock.json
 └── README.md
+```
 
 ## Technology Used
 
