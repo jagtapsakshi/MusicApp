@@ -1,33 +1,32 @@
 import React, { Component } from 'react';
 import './Playlist.css';
 import Tracklist from '../TrackList/Tracklist';
-import PropTypes from 'prop-types'; // Import PropTypes for validation
+import PropTypes from 'prop-types';
 
 class Playlist extends Component {
     constructor(props) {
         super(props);
-
         this.handleNameChange = this.handleNameChange.bind(this);
     }
 
     handleNameChange(event) {
-        this.props.onNameChange(event.target.value);
+        this.props.onNameChange(event.target.value); // Call to update playlist name if needed
     }
 
     render() {
         return (
             <div className='Playlist'>
-                <input 
-                    onChange={this.handleNameChange} 
-                    defaultValue="New Playlist" 
+                <input
+                    value="New Playlist" // Use value to set the default name as non-editable
+                    readOnly // Make input non-editable
                 />
-                <Tracklist 
-                    tracks={this.props.playlistTracks} // Corrected prop name
+                <Tracklist
+                    tracks={this.props.playlistTracks}
                     isRemoval={true}
-                    onRemove={this.props.onRemove} 
+                    onRemove={this.props.onRemove}
                 />
-                <button 
-                    className='Playlist-save' 
+                <button
+                    className='Playlist-save'
                     onClick={this.props.onSave}
                 >
                     Save to Spotify
@@ -37,12 +36,12 @@ class Playlist extends Component {
     }
 }
 
-// Add PropTypes for type-checking props
+// PropTypes validation
 Playlist.propTypes = {
-    playlistTracks: PropTypes.array.isRequired, // Ensure this is an array
-    onNameChange: PropTypes.func.isRequired,    // Ensure this is a function
-    onRemove: PropTypes.func.isRequired,        // Ensure this is a function
-    onSave: PropTypes.func.isRequired           // Ensure this is a function
+    playlistTracks: PropTypes.array.isRequired,
+    onNameChange: PropTypes.func.isRequired,
+    onRemove: PropTypes.func.isRequired,
+    onSave: PropTypes.func.isRequired
 };
 
 export default Playlist;

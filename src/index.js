@@ -5,6 +5,11 @@ import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// creates a React root to manage rendering.
+// here we replace the root element in the html file with a new root element having all components
+
+
+//: Displays the App component inside the root element in the browser DOM using root.render().
 root.render(
   <React.StrictMode>
     <App />
